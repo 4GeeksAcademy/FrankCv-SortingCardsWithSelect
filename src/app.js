@@ -30,6 +30,9 @@ window.onload = function() {
   let generalContainer = document.querySelector("#generalContainer");
   //Event Listener when i click draw button
   drawButton.addEventListener("click", function() {
+    //to delete shuffled or sorted cards if draw is clicked again
+    let containerShuffle = document.querySelectorAll(`.shuffle`);
+    containerShuffle.forEach(e => e.remove());
     let inputValue = inputNumber.value;
     drawCards.innerHTML = "";
     for (let i = 0; i < inputValue; i++) {
